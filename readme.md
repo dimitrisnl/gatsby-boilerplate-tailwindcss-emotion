@@ -19,6 +19,8 @@
 
 ## Features
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/dimitrisnl/gatsby-boilerplate.svg)](https://greenkeeper.io/)
+
 - [X] 🤩 Page Transitions, component-based (with no-js support)
 - [X] 👮‍♂️ `IntersectionObserver`, component-based (with polyfill)
 - [X] 🌿 React Context for global UI state, with SSR
