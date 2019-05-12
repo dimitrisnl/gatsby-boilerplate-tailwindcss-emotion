@@ -1,28 +1,19 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import Layout from 'components/layout';
-import Box from 'components/box';
-import Title from 'components/title';
-import Gallery from 'components/gallery';
-import IOExample from 'components/io-example';
 import { graphql } from 'gatsby';
+
+import Layout from 'components/layout';
+import Head from 'components/head';
+
+import { Hero, Stripe, Features } from 'sections/index';
 
 const Index = ({ data }) => (
   <Layout>
-    <Box>
-      <Title as="h2" size="large">
-        {data.homeJson.content.childMarkdownRemark.rawMarkdownBody}
-      </Title>
-    </Box>
-    <Gallery items={data.homeJson.gallery} />
-    <div style={{ height: '50vh' }} />
-    <IOExample />
+    <Head pageTitle={data.homeJson.title} />
+    <Hero />
+    <Stripe />
+    <Features />
   </Layout>
 );
-
-Index.propTypes = {
-  data: PropTypes.object.isRequired,
-};
 
 export default Index;
 
