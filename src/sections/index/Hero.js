@@ -1,4 +1,5 @@
 import React from 'react';
+import { Solid, Plain } from 'components/button';
 import Image from 'images/hero.svg';
 
 const Hero = () => (
@@ -13,12 +14,10 @@ const Hero = () => (
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <button class="mb-2 bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded-full md:mb-0">
-              Call to action
-            </button>
-            <button class="text-white text-sm hover:underline block mx-auto md:inline-block md:ml-6">
+            <Solid className="mb-2 md:mb-0">Call to action</Solid>
+            <Plain className="block mx-auto md:inline-block md:ml-6">
               or use this CTA
-            </button>
+            </Plain>
           </div>
         </div>
         <div className="hidden lg:block w-1/2 px-2 ">

@@ -60,14 +60,12 @@ Features.defaultProps = {
       body:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent facilisis egestas elementum.',
     },
-    ,
     {
       icon: 'L',
       title: 'Lorem',
       body:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent facilisis egestas elementum.',
     },
-    ,
     {
       icon: 'L',
       title: 'Lorem',

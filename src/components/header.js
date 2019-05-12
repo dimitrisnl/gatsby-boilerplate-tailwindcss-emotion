@@ -2,8 +2,8 @@ import React, { useState, useCallback } from 'react';
 import { Link } from 'gatsby';
 
 const Header = ({ title }) => {
-  const [ isOpen, setIsOpen ] = useState(false)
-  const handleVisibility = useCallback(() => setIsOpen(!isOpen), [isOpen])
+  const [isOpen, setIsOpen] = useState(false);
+  const handleVisibility = useCallback(() => setIsOpen(!isOpen), [isOpen]);
 
   return (
     <nav className="flex items-center justify-between flex-wrap bg-blue-900 p-6">
@@ -28,30 +28,29 @@ const Header = ({ title }) => {
         </button>
       </div>
       <div
-        className={
-          isOpen
-            ? 'block'
-            : 'hidden' +
-              ' w-full  flex-grow lg:flex lg:items-center lg:justify-end lg:w-auto'
-        }
+        className={`${
+          isOpen ? 'block' : 'hidden'
+        } w-full flex-grow lg:flex lg:items-center lg:justify-end lg:w-auto`}
       >
         <div>
           <Link
-            to="contact"
+            to="components"
             className="block mt-4 lg:inline-block lg:mt-0 lg:mr-6 text-blue-200 hover:text-white"
           >
-            Contact
+            Components
           </Link>
           <a
-            href="#"
+            href="https://github.com/dimitrisnl/gatsby-boilerplate"
+            target="_blank"
+            rel="noopener noreferrer"
             className="block mt-4 lg:inline-block lg:mt-0 text-blue-200 hover:text-white"
           >
-            Gace book
+            Github
           </a>
         </div>
       </div>
     </nav>
   );
-}
+};
 
 export default Header;
