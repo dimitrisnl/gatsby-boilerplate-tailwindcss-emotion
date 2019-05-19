@@ -9,7 +9,7 @@ const Dropdown = styled.div`
 
 const NavLinks = () => (
   <a
-    href="https://github.com/dimitrisnl/gatsby-boilerplate"
+    href="https://github.com/dimitrisnl/gatsby-boilerplate-tailwindcss-emotion"
     target="_blank"
     rel="noopener noreferrer"
     className="block mt-4 lg:inline-block lg:mt-0 text-blue-200 hover:text-white"
