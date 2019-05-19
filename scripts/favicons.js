@@ -6,7 +6,7 @@ const {
   siteTitleShort,
   themeColor,
   backgroundColor,
-} = require('../site-config');
+} = require('../config/metadata');
 
 const dir = path.resolve(__dirname, '../public/icons/');
 if (!fs.existsSync(dir)) {

@@ -9,10 +9,10 @@ const Lead = ({ title, subtitle, body }) => (
 );
 
 const Feature = ({ icon, title, body }) => (
-  <div className="p-4 text-sm rounded">
+  <div className="text-sm rounded">
     <div className="mb-4">
-      <div className="text-white bg-indigo-500 rounded-full w-8 h-8 inline-flex items-center justify-center">
-        {icon}
+      <div className="text-white bg-indigo-500 rounded-full w-10 h-10 inline-flex items-center justify-center">
+        <span className="text-lg">{icon}</span>
       </div>
       <div className="inline-block ml-4 text-lg">{title}</div>
     </div>
@@ -25,7 +25,7 @@ const Features = ({ list, lead }) => (
     <div className="flex flex-wrap -mx-2">
       <div className="lg:w-2/3 flex flex-wrap px-2 -mx-2">
         {list.map((feature, index) => (
-          <div className="w-1/2 mt-2 px-2" id={index}>
+          <div className="w-full md:w-1/2 my-4 px-2" key={index}>
             <Feature {...feature} />
           </div>
         ))}
@@ -38,39 +38,3 @@ const Features = ({ list, lead }) => (
 );
 
 export default Features;
-
-// Placeholders..
-Features.defaultProps = {
-  lead: {
-    title: 'Lorem Ipsum',
-    subtitle: 'Dolor sit amet',
-    body:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-  },
-  list: [
-    {
-      icon: 'L',
-      title: 'Lorem',
-      body:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent facilisis egestas elementum.',
-    },
-    {
-      icon: 'L',
-      title: 'Lorem',
-      body:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent facilisis egestas elementum.',
-    },
-    {
-      icon: 'L',
-      title: 'Lorem',
-      body:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent facilisis egestas elementum.',
-    },
-    {
-      icon: 'L',
-      title: 'Lorem',
-      body:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent facilisis egestas elementum.',
-    },
-  ],
-};

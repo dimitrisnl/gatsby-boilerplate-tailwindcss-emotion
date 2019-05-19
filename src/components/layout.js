@@ -1,6 +1,6 @@
 import React from 'react';
-import { StaticQuery, graphql } from 'gatsby';
-import styled from 'styled-components';
+import { graphql, useStaticQuery } from 'gatsby';
+import styled from '@emotion/styled';
 
 import Head from 'components/head';
 import Header from 'components/header';
@@ -25,19 +25,18 @@ const Layout = ({ data, children }) => (
   </Content>
 );
 
-const LayoutWithQuery = props => (
-  <StaticQuery
-    query={graphql`
-      query LayoutQuery {
-        site {
-          siteMetadata {
-            siteTitle
-          }
+const LayoutWithQuery = props => {
+  const data = useStaticQuery(graphql`
+    query LayoutQuery {
+      site {
+        siteMetadata {
+          siteTitle
         }
       }
-    `}
-    render={data => <Layout data={data} {...props} />}
-  />
-);
+    }
+  `);
+
+  return <Layout data={data} {...props} />;
+};
 
 export default LayoutWithQuery;

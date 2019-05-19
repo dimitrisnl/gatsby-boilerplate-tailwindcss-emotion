@@ -8,8 +8,10 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     `gatsby-transformer-json`,
-    `gatsby-transformer-remark`,
+    `gatsby-transformer-remark`, // not used atm
     `gatsby-plugin-eslint`,
+    `gatsby-plugin-emotion`,
+    `gatsby-plugin-tailwindcss`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -17,7 +19,7 @@ module.exports = {
         path: `${__dirname}/content`,
       },
     },
-    `gatsby-plugin-sharp`,
+    `gatsby-plugin-sharp`, // not used atn
     `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-react-svg`,

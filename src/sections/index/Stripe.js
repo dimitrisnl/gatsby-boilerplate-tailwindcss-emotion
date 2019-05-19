@@ -8,9 +8,3 @@ const Stripe = ({ title, body, href }) => (
 );
 
 export default Stripe;
-
-Stripe.defaultProps = {
-  title: 'NEW',
-  body: 'Lorem ipsum dolor sit amet',
-  href: 'https://google.com',
-};

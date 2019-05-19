@@ -6,6 +6,7 @@ module.exports = {
   },
   globals: {
     graphql: true,
+    tw: true,
     __PATH_PREFIX__: true,
   },
   extends: `react-app`,
