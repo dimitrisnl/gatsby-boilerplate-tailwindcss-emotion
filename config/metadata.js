@@ -4,7 +4,7 @@ module.exports = {
   siteTitle: `Website`,
   siteTitleShort: `wb`,
   siteDescription: `A solid start for a Gatsby project`,
-  siteUrl: `https://goofy-shockley-a56654.netlify.com`, // Change this
+  siteUrl: `https://gatsby-boilerplate-tailwind-emotion.netlify.com`, // Change this
   themeColor: '#000',
   backgroundColor: `#fff`,
   pathPrefix: null,
