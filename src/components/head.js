@@ -7,13 +7,12 @@ import schemaGenerator from 'helpers/schemaGenerator';
 const Head = ({
   siteTitle,
   siteDescription,
-  siteUrl,
   pageTitle,
   pageTitleFull = pageTitle ? `${siteTitle} | ${pageTitle}` : siteTitle,
   themeColor,
   imageUrl,
   location,
-  canonical = siteUrl + (location.pathname || ''),
+  canonical = location.host + (location.pathname || ''),
 }) => (
   <Helmet>
     <html lang="en" />
@@ -22,7 +21,6 @@ const Head = ({
       content="width=device-width,initial-scale=1.0,user-scalable=yes"
       name="viewport"
     />
-
     <meta content={siteTitle} name="apple-mobile-web-app-title" />
     <meta content={pageTitleFull} property="og:title" />
     <meta content={pageTitleFull} name="twitter:title" />
@@ -48,13 +46,22 @@ const Head = ({
     <meta content={canonical} name="twitter:url" />
     <link rel="canonical" href={canonical} />
 
-    <meta content={imageUrl || `${siteUrl}/social.png`} property="og:image" />
+    <meta
+      content={imageUrl || `${location.host}/social.png`}
+      property="og:image"
+    />
     <meta content="1024" property="og:image:width" />
     <meta content="512" property="og:image:height" />
-    <meta content={imageUrl || `${siteUrl}/social.png`} name="twitter:image" />
+    <meta
+      content={imageUrl || `${location.host}/social.png`}
+      name="twitter:image"
+    />
     <meta content="1024" name="twitter:image:width" />
     <meta content="512" name="twitter:image:height" />
-    <meta content={imageUrl || `${siteUrl}/social.png`} property="og:image" />
+    <meta
+      content={imageUrl || `${location.host}/social.png`}
+      property="og:image"
+    />
     <meta content="1024" property="og:image:width" />
     <meta content="512" property="og:image:height" />
 
@@ -149,7 +156,7 @@ const Head = ({
         schemaGenerator({
           location,
           canonical,
-          siteUrl,
+          siteUrl: location.host,
           pageTitle,
           siteTitle,
           pageTitleFull,
@@ -168,7 +175,6 @@ const HeadWithQuery = props => (
             siteTitle
             siteTitleShort
             siteDescription
-            siteUrl
             themeColor
           }
         }
